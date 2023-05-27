@@ -24,7 +24,7 @@ class Tree {
 
 void Tree::createTree(Node* root, const std::vector<char>& order) {
   if (root != nullptr) {
-    for (auto symbol : order) {
+    for (char symbol : order) {
       Node* temp = new Node;
       temp->ch = symbol;
       root->children.push_back(temp);
