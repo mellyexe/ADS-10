@@ -22,16 +22,16 @@ class Tree {
 };
 
 void Tree::createTree(Node* root, const std::vector<char>& order) {
-	 if (root != nullptr) {
-		  for (const auto& symbol : order) {
-		   	Node* temp = new Node;
-			   temp->ch = symbol;
-			   root->children.push_back(temp);
-		   	std::vector<char> new_vector(order);
-		   	new_vector.erase(std::find(new_vector.begin(), new_vector.end(), symbol));
-		   	createTree(temp, new_vector);
-	  	}
- 	}
+  if (root != nullptr) {
+    for (const auto& symbol : order) {
+      Node* temp = new Node;
+      temp->ch = symbol;
+      root->children.push_back(temp);
+      std::vector<char> new_vector(order);
+      new_vector.erase(std::find(new_vector.begin(), new_vector.end(), symbol));
+      createTree(temp, new_vector);
+    }
+  }
 }
 
 
