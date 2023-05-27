@@ -1,9 +1,8 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TREE_H_
 #define INCLUDE_TREE_H_
-#include <iostream>
 #include <vector>
-
+#include <algorithm>
 
 class Tree {
  private:
@@ -24,7 +23,7 @@ class Tree {
 
 void Tree::createTree(Node* root, const std::vector<char>& order) {
   if (root != nullptr) {
-    for (char symbol : order) {
+    for (auto symbol : order) {
       Node* temp = new Node;
       temp->ch = symbol;
       root->children.push_back(temp);
