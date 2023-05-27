@@ -18,7 +18,7 @@ class Tree {
   void makePermutations(Node*, std::vector<char>);
   void createTreePermutations(const std::vector<char>&);
  public:
-  Tree(const std::vector<char>&);
+  explicit Tree(const std::vector<char>&);
   std::vector<std::vector<char>> getPermutations() const;
 };
 
