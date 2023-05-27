@@ -32,9 +32,6 @@ void Tree::createTree(Node* root, const std::vector<char>& order) {
       new_vector.erase(std::find(new_vector.begin(), new_vector.end(), symbol));
       createTree(temp, new_vector);
     }
-  } else {
-    std::cout << "Error: root was now found." << std::endl;
-  }
 }
 
 void Tree::makePermutations(Node* root, std::vector<char> variation) {
